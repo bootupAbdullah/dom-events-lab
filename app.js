@@ -36,8 +36,19 @@ calculator.addEventListener('click', (event) => {
   });
   
 /*-------------------------------- Functions --------------------------------*/
+// !! This is compeleted code from the DOM Events Video as a refrence tool.
 
-// for (num in buttonNumber.va)
+//   commentButtonElement.addEventListener('click', ()=> {
+//     if(inputElement.value != "" ) {
+//     const commentElement = document.createElement('li');
+//     commentElement.textContent = inputElement.value
+//     commentListElement.appendChild(commentElement);
+//     inputElement.value = "";
+// }   
+
+
+
+
 
 //attempting to create a function that handles button clicking
 // const handleButtons = () => {
@@ -48,8 +59,6 @@ calculator.addEventListener('click', (event) => {
 //         })
 //     })    
 // }
-    
-
 
 //display buttons that are pressed
 buttons.forEach((button) => {
@@ -58,8 +67,8 @@ buttons.forEach((button) => {
     console.log(event.target.innerText);
     });
   });
-  
 
+  
 // building operations functonality
 
 // buttons.forEach((button) => {
@@ -91,59 +100,51 @@ buttons.forEach((button) => {
 // }
 
  
-function calculate(number,number2, operator){
-    console.log('we are in calculate function')
-    switch(operator) {
-        case "+":
-           display.innerText =  number + number2;
-           console.log(`this is the display.innerText : ${display.innerText}`)
-           break;
-        case "-":
-            //function subtract
-            break;
-        case "/":
-            //function divide
-            break;
-        case "*":
-            //function multiply
-            break;
-    }
+//!! I was attempting work out the function for calculations but did not finsih.
 
-// building calculation functionality
-buttons.forEach((button) => {
-    console.log(`for each function`);
-    button.addEventListener('click', (event) => {
-        if (event.target.classList.contains('number') && number !== null) {
-            number = Number(button.innerText)
-            console.log(`number is ${number}`)
-        }
-         if(event.target.classList.contains('number') && number === null){
-            number2 = Number(button.innerText)
-            console.log(`number2 is ${number2}`)
+// function calculate(number,number2, operator){
+//     console.log('we are in calculate function')
+//     switch(operator) {
+//         case "+":
+//            display.innerText =  number + number2;
+//            console.log(`this is the display.innerText : ${display.innerText}`)
+//            break;
+//         case "-":
+//             //function subtract
+//             break;
+//         case "/":
+//             //function divide
+//             break;
+//         case "*":
+//             //function multiply
+//             break;
+//     }
 
-        }
-        if (event.target.classList.contains('operator')) {
-             operator = button.innerText
-             console.log(`operator is ${operator}`)
-        }
-        if (operator === "=") {
-            calculate(number,number2, operator);
-        }
-    })
-})
+// // building calculation functionality
+// buttons.forEach((button) => {
+//     console.log(`for each function`);
+//     button.addEventListener('click', (event) => {
+//         if (event.target.classList.contains('number') && number !== undefined) {
+//             number = Number(button.innerText)
+//             console.log(`number is ${number}`)
+//         }
+//          if(event.target.classList.contains('number') && number === undefined){
+//             number2 = Number(button.innerText)
+//             console.log(`number2 is ${number2}`)
 
-console.log(result)
+//         }
+//         if (event.target.classList.contains('operator')) {
+//              operator = button.innerText
+//              console.log(`operator is ${operator}`)
+//         }
+//         if (operator === "=") {
+//             calculate(number,number2, operator);
+//         }
+//     })
+// })
+
+// console.log(result)
+
+// }
 
 
-}
-
-
-//workig functionality for button usage from DOM tutorial
-
-//   commentButtonElement.addEventListener('click', ()=> {
-//     if(inputElement.value != "" ) {
-//     const commentElement = document.createElement('li');
-//     commentElement.textContent = inputElement.value
-//     commentListElement.appendChild(commentElement);
-//     inputElement.value = "";
-// }   
